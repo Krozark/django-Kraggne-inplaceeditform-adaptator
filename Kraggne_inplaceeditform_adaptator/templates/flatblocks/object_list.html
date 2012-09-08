@@ -1,0 +1,9 @@
+<div class="object_list">
+{% for object in generic_object_list.serialize %}
+<ul>
+    {% for field,value in object.fields.items %}
+    <li>{{ field }}:{% inplace_edit "object."|add:field %}</li>
+    {% endfor %}
+</ul>
+{% endfor %}
+</div>

@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 setup(
     name='Kraggne_inplaceeditform_adaptator',
     version='0.1',
-    description='À module that custom Kraggne template to auto work with inplaceeditform',
+    description='A module that custom Kraggne template to auto work with inplaceeditform',
     long_description=open('README.md').read(),
     author='Maxime Barbier',
     author_email='maxime.barbier1991@gmail.com',

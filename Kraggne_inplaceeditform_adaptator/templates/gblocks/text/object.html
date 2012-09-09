@@ -1,1 +1,3 @@
-{{ object.text|linebreaks }}
+{% load inplace_edit %}
+
+{% inplace_edit "object.text|linebreaks" %}

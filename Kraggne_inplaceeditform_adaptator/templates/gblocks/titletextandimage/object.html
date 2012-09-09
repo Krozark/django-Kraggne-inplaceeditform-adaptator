@@ -1,5 +1,5 @@
-<h2>{{ object.title }}</h2>
+{% load inplace_edit %}
 
-<p><img src="{{ MEDIA_URL }}{{ object.image }}" alt=""/></p>
-
-{{ object.text|safe }}
+<h2>{% inplace_edit "object.title" %}</h2>
+<img src="{% inplace_edit "object.image" %}" alt=""/>
+{% inplace_edit "object.text|linebreaks" %}

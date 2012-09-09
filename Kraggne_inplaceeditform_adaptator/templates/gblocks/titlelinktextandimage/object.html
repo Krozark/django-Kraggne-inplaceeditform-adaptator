@@ -1,4 +1,6 @@
-{{ object.title }}
-<img src="{{ MEDIA_URL }}{{ object.image }}" alt=""/>
-{{ object.text|safe }}
-{{ object.link|urlize }}
+{% load inplace_edit %}
+
+{% inplace_edit "object.title" %}
+<img src="{% inplace_edit "object.image" %}" alt=""/>
+{% inplace_edit "object.text|linebreaks" %}
+{% inplace_edit "object.link|urlize" %}

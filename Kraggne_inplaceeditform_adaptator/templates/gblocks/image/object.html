@@ -1,1 +1,3 @@
-<img src="{{ MEDIA_URL }}{{ object.image }}" alt=""/>
+{% load inplace_edit %}
+
+<img src="{% inplace_edit "object.image" %}" alt=""/>

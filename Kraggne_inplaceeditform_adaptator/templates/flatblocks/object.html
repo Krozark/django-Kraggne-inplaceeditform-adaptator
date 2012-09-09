@@ -1,6 +1,8 @@
 {% load inplace_edit %}
 <ul>
-    {% for field, value in generic_object %}
-    <li>{{ field }}:{% inplace_edit "generic_object."|add:field %}</li>
-{% endfor %}
+    {% for field in generic_object.fields %}
+    {% with var="object."|add:field object=generic_object.content_object %}
+        <li>{{ field }}:{% inplace_edit var %}</li>
+    {% endwith %}
+    {% endfor %}
 </ul>

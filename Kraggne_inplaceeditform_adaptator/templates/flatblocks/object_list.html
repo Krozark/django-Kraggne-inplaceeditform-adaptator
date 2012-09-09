@@ -1,8 +1,12 @@
+{% load inplace_edit %}
+
 <div class="object_list">
-{% for object in generic_object_list.serialize %}
+{% for object,ser in generic_object_list.object_list_serialize %}
 <ul>
-    {% for field,value in object.fields.items %}
-    <li>{{ field }}:{% inplace_edit "object."|add:field %}</li>
+    {% for field,value in ser.fields.items %}
+    {% with "object."|add:field as var %}
+        <li>{{ field }}:{% inplace_edit var %}</li>
+    {% endwith %}
     {% endfor %}
 </ul>
 {% endfor %}

@@ -1,5 +1,5 @@
 {% load inplace_edit %}
-<ul>
+<ul class="flatblocks-object">
     {% for field in generic_object.fields %}
     {% with var="object."|add:field object=generic_object.content_object %}
         <li>{{ field }}:{% inplace_edit var %}</li>

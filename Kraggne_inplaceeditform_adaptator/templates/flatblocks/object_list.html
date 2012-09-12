@@ -2,7 +2,7 @@
 
 <div class="object_list">
 {% for object,ser in generic_object_list.object_list_serialize %}
-<ul>
+<ul class="flatblocks-object">
     {% for field,value in ser.fields.items %}
     {% with "object."|add:field as var %}
         <li>{{ field }}:{% inplace_edit var %}</li>

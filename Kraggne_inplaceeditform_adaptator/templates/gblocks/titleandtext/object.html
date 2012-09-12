@@ -1,4 +1,6 @@
 {% load inplace_edit %}
 
-<h2>{% inplace_edit "object.title" %}</h2>
-{% inplace_edit "object.text|linebreaks" %}
+<div class="gblocks">
+    <h2 class="gblocks-title">{% inplace_edit "object.title" %}</h2>
+    <div class="gblocks-text">{% inplace_edit "object.text|linebreaks" %}</div>
+</div>
